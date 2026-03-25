@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATC Ground Control</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- The airport map lives here -->
+     <canvas id="airport-canvas"></canvas>
+
+     <!--The UI panels (strips, comms, HUD)-->
+     <div id="ui-root">
+        <div id="hud"></div>
+        <div id="strip-board"></div>
+        <div id="comms-log"></div>
+        <div id="action-bar"></div>
+     </div>
+
+     <!-- Scripts load in order - each file can use things defined before it-->
+    <script src="src/airport/layout.js"></script>
+    <script src="src/airport/taxiways.js"></script>
+    <script src="src/core/aircraft.js"></script>
+    <script src="src/core/physics.js"></script>
+    <script src="src/ui/hud.js"></script>
+    <script src="src/ui/strips.js"></script>
+    <script src="src/ui/comms.js"></script>
+    <script src="src/core/game.js"></script>
+</body>
+</html>

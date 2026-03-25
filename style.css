@@ -1,0 +1,84 @@
+/* CSS reset — browsers have default styles we don't want */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Define our colour palette as variables.
+     Change one variable, it updates everywhere it's used. */
+  --bg-dark:      #0a0e0a;
+  --bg-panel:     #0f1510;
+  --bg-surface:   #161e16;
+  --border:       #1e2e1e;
+  --border-hi:    #2a4a2a;
+  --text-primary: #b8d8b8;
+  --text-muted:   #6a8a6a;
+  --text-dim:     #3a5a3a;
+  --green:        #4a9a4a;
+  --blue:         #3a7ab8;
+  --amber:        #c8900a;
+  --red:          #b84040;
+  --purple:       #7a5ab8;
+  --font-mono:    'Courier New', Courier, monospace;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The canvas fills all available space */
+#airport-canvas {
+  display: block;
+  flex: 1;
+  cursor: crosshair;
+}
+
+/* UI sits below the map */
+#ui-root {
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 32px 1fr;
+  border-top: 1px solid var(--border);
+  background: var(--bg-panel);
+}
+
+#hud {
+  grid-column: 1 / -1;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 20px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+#strip-board {
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 6px;
+}
+
+#comms-log {
+  overflow-y: auto;
+  padding: 6px 10px;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+#action-bar {
+  border-left: 1px solid var(--border);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
