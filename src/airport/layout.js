@@ -23,36 +23,37 @@ const AIRPORTS = {
     // x=0 is left edge, x=1 is right edge.
     // y=0 is top edge, y=1 is bottom edge.
     nodes: {
-      // Gates (where aircraft start)
-      GA1: [0.08, 0.20],
-      GA2: [0.08, 0.28],
-      GA3: [0.08, 0.36],
-      GA4: [0.08, 0.44],
-      GB1: [0.08, 0.58],
-      GB2: [0.08, 0.66],
-      GB3: [0.08, 0.74],
+    // Gates — center-left of the canvas
+    GA1: [0.35, 0.20],
+    GA2: [0.35, 0.30],
+    GA3: [0.35, 0.40],
+    GA4: [0.35, 0.50],
+    GB1: [0.35, 0.60],
+    GB2: [0.35, 0.70],
+    GB3: [0.35, 0.80],
 
-      // Taxiway spine nodes (intersections)
-      TA1: [0.20, 0.20],
-      TA2: [0.20, 0.44],
-      TA3: [0.20, 0.74],
-      TB1: [0.38, 0.20],
-      TB2: [0.38, 0.44],
-      TB3: [0.38, 0.74],
-      TC1: [0.55, 0.20],
-      TC2: [0.55, 0.44],
-      TC3: [0.55, 0.74],
+    // Taxiway intersections
+    TA1: [0.45, 0.20],
+    TA2: [0.45, 0.50],
+    TA3: [0.45, 0.80],
+    TB1: [0.55, 0.20],
+    TB2: [0.55, 0.50],
+    TB3: [0.55, 0.80],
+    TC1: [0.65, 0.20],
+    TC2: [0.65, 0.50],
+    TC3: [0.65, 0.80],
 
-      // Hold short positions (aircraft stop here and call in)
-      HS_28L: [0.68, 0.30],
-      HS_28R: [0.68, 0.62],
+    // Hold short positions
+    HS_28L: [0.75, 0.30],
+    HS_28R: [0.75, 0.65],
 
-      // Runway thresholds (the ends of the runways)
-      RWY_28L_NEAR: [0.72, 0.20],
-      RWY_28L_FAR:  [0.72, 0.88],
-      RWY_28R_NEAR: [0.85, 0.20],
-      RWY_28R_FAR:  [0.85, 0.88],
-    },
+    // Runway endpoints — far right, like runways surrounding the terminal
+    RWY_28L_NEAR: [0.82, 0.10],
+    RWY_28L_FAR:  [0.82, 0.90],
+    RWY_28R_NEAR: [0.93, 0.10],
+    RWY_28R_FAR:  [0.93, 0.90],
+},
+
 
     // Edges define which nodes are directly connected.
     // The taxiway system is two-directional unless noted.
