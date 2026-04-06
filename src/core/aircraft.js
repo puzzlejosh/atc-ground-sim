@@ -222,10 +222,7 @@ class Aircraft {
 
     // Is this aircraft actively moving on the taxiway?
     isMoving() {
-        return (
-            this.status === STATUS.PUSHBACK ||
-            this.status === STATUS.TAXI
-        ) && !this.holdPosition;
+        return this.status === STATUS.TAXI && !this.holdPosition;
     }
 
 }

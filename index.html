@@ -8,18 +8,22 @@
 </head>
 <body>
 
-    <!-- The airport map lives here -->
-     <canvas id="airport-canvas"></canvas>
+    <canvas id="airport-canvas"></canvas>
 
-     <!--The UI panels (strips, comms, HUD)-->
-     <div id="ui-root">
-        <div id="hud"></div>
+    <div id="ui-root">
+
+        <div id="hud">
+            <span id="selected-callsign">---</span>
+            <input id="cmd-input" type="text" placeholder="type command..." autocomplete="off" />
+            <button id="cmd-send">SEND</button>
+        </div>
+
         <div id="strip-board"></div>
         <div id="comms-log"></div>
         <div id="action-bar"></div>
-     </div>
 
-     <!-- Scripts load in order - each file can use things defined before it-->
+    </div>
+
     <script src="src/airport/layout.js"></script>
     <script src="src/airport/taxiways.js"></script>
     <script src="src/core/aircraft.js"></script>
