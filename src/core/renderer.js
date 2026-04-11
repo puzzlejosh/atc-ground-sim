@@ -1,3 +1,7 @@
+// RENDERING
+// All drawing commands go here.
+// The renderer reads state - it never changes it.
+
 function drawFrame () {
     const W = canvas.width;
     const H = canvas.height;
